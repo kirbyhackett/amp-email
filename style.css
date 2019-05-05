@@ -1,4 +1,19 @@
-	 .dh-gallery-table { border-spacing: 0; margin: 0 auto; border-collapse: separate; max-width: 960px; }
-     .dh-gallery-table tr { padding: 0px; margin: 0; line-height:0; }
-     .dh-gallery-table td { padding: 4px; max-width:320px;}
-     .dh-gallery-table img { max-width: 100%; }
+.dh-gallery-table { 
+    border-spacing: 0;
+    margin: 0 auto; 
+    border-collapse: separate; 
+    max-width: 960px; 
+}
+.dh-gallery-table tr { 
+    padding: 0px; 
+    margin: 0; 
+    line-height:0; }
+.dh-gallery-table td { 
+    max-width:320px;
+}
+.dh-gallery-table img { 
+    max-width: 100%; 
+}
+.jumbotron {
+    border-radius: 0 !important; 
+}
