@@ -1,0 +1,42 @@
+<!doctype html>
+<html ⚡4email>
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <style amp4email-boilerplate>body{visibility:hidden}</style>
+  <style amp-custom>
+    .products {
+      display: block;
+      height: 100px;
+      background: #fff;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .products amp-img {
+      float: left;
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <amp-list id="amp-list-placeholder" noloading width="auto"
+            height="600"
+            layout="fixed-height" src="https://amp.gmail.dev/playground/public/ssr_amp_list">
+
+    <template type="amp-mustache">
+        <div class="products">
+            <amp-img width="150"
+                   height="100"
+                   alt="{{name}}"
+                   src="{{img}}"></amp-img>
+            <p class="name">{{name}}</p>
+            <p class="star">{{{stars}}}</p>
+            <p class="price">{{price}}</p>
+        </div>
+    </template>
+  </amp-list>
+</body>
+</html>

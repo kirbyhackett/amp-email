@@ -30,6 +30,6 @@ body {
 #formControlTextarea:hover {
   cursor: pointer;
 }
-#table-selection, #codePreview{
+#codePreview{
   margin-bottom: 0;
 }

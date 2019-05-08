@@ -21,7 +21,21 @@
       </div>
     </nav>
     <form class="jumbotron">
-
+      
+      <!-- Email Select -->
+      <label for="exampleInputEmail1">Template Type: 
+        <span id="templateValue" class="text-primary">HTML</span>
+      </label><br>
+      <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+        <label class="btn btn-light btn-sm active">
+          <input type="radio" name="htmlToggle" id="htmlToggle" value="HTML" autocomplete="off" checked>HTML Email
+        </label>
+        <label class="btn btn-light btn-sm">
+          <input type="radio" name="ampToggle" id="ampToggle" value="AMP" autocomplete="off">
+          AMP Email
+        </label>
+      </div><br>
+      
       <!-- rows group -->
       <label for="exampleInputEmail1">Number of Rows: 
           <span id="rowsValue" class="text-primary">2</span>
@@ -88,18 +102,14 @@
         <label for="exampleFormControlTextarea1">Table Code:</label>
         <textarea class="form-control" id="formControlTextarea" rows="5" readonly>
         </textarea>
-        <form >
-          <div class="form-group mt-3" id="table-selection">
-            <button type="submit" class="btn btn-secondary btn-sm" id="generateTemplate">HTML Email</button>
-            <button type="submit" class="btn btn-secondary btn-sm" id="generateTemplate">Amp Email</button>
-          </div>
-        </form>
       </div>
 
     </form>
 
     <!-- table preview -->
     <div class="container" id="table-preview"></div>
+    
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

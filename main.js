@@ -4,6 +4,9 @@ var columns = 3;
 var spacing = 3;
 var htmlTable = '';
 var ampTable = ''; 
+var templateType = 'HTML';
+
+
 
 // click event for the generate template button
 $('#generateTemplate').click((e)=>{
@@ -12,9 +15,12 @@ $('#generateTemplate').click((e)=>{
   e.preventDefault();
 
   htmlTable = `<table class="dh-gallery-table">`;
+  ampTable = `<table class="dh-gallery-table">`;
 
   for(var i = 0; i < rows; i++) {
     htmlTable = htmlTable + `<tr>`;
+    ampTable = ampTable + `<tr>`;
+    
 
     for(var j = 0; j < columns; j++) {
         htmlTable = htmlTable + `
@@ -23,13 +29,28 @@ $('#generateTemplate').click((e)=>{
             <img src="https://placeimg.com/150/150/animals" height="150" />
           </a>
         </td>`;
+        ampTable = ampTable + `
+        <td style="padding:` + spacing + `px;">
+          <a href="https://hackett.dev" target="_blank">
+            <amp-img src="https://placeimg.com/150/150/animals" height="150" width="150">
+            </amp-img>
+          </a>
+        </td>`;
       }
-    htmlTable = htmlTable + `\n</tr>`;
+    htmlTable = htmlTable + `</tr>`;
+    ampTable = ampTable + `</tr>`;
   }
   htmlTable = htmlTable + `</table>`;
+  ampTable = ampTable + `
+  </table>`;
   
-  $('#formControlTextarea').text( htmlTable );
-//  document.getElementById('formControlTextarea').innerHTML = htmlTable;
+  if(templateType === 'AMP') {
+    $('#formControlTextarea').text( ampTable );
+  }else {
+    $('#formControlTextarea').text( htmlTable );
+  }
+  
+  // AMP tables won't render in HTML, so showing HTML preview
   document.getElementById('table-preview').innerHTML = htmlTable;
 });
 
@@ -46,8 +67,18 @@ $('.form-check-input').click((e)=>{
   };
 });
 
+$('#formControlTextarea').click(()=>{
+  document.getElementById("formControlTextarea").select();
+});
+
+// click event for HTML/AMP Toggle
+$('.btn-group-toggle').change((e)=>{
+  templateType = e.target.value;
+  document.getElementById('templateValue').innerHTML = e.target.value;
+});
+
 // slider change event
-$( ".custom-range" ).change(function(e) {
+$( ".custom-range" ).change((e)=>{
   spacing = e.currentTarget.value;
   document.getElementById('spacingValue').innerHTML = e.currentTarget.value + 'px';
 });
