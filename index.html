@@ -1,119 +1,121 @@
 <html>
-  <head>
-    <title>Email Template Generator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='style.css' rel=stylesheet type='text/css'>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        ⚡ AMP Email Template Generator
-      </a>
-      <div>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/kirbyhackett"><i class="fab fa-github"></i> Check me out!</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <form class="jumbotron">
-      
-      <!-- Email Select -->
-      <label for="exampleInputEmail1">Template Type: 
-        <span id="templateValue" class="text-primary">HTML</span>
-      </label><br>
-      <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
-        <label class="btn btn-light btn-sm active">
-          <input type="radio" name="htmlToggle" id="htmlToggle" value="HTML" autocomplete="off" checked>HTML Email
-        </label>
-        <label class="btn btn-light btn-sm">
-          <input type="radio" name="ampToggle" id="ampToggle" value="AMP" autocomplete="off">
-          AMP Email
-        </label>
-      </div><br>
-      
-      <!-- rows group -->
-      <label for="exampleInputEmail1">Number of Rows: 
-          <span id="rowsValue" class="text-primary">2</span>
+
+<head>
+  <title>Email Template Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='style.css' rel=stylesheet type='text/css'>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      ⚡ AMP Email Template Generator
+    </a>
+    <div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/kirbyhackett"><i class="fab fa-github"></i> Check me out!</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <form class="jumbotron">
+
+    <!-- Email Select -->
+    <label for="exampleInputEmail1">Template Type:
+      <span id="templateValue" class="text-primary">HTML</span>
+    </label><br>
+    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+      <label class="btn btn-light btn-sm active">
+        <input type="radio" name="htmlToggle" id="htmlToggle" value="HTML" autocomplete="off" checked>HTML Email
       </label>
-      <div class="form-group">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="rows" id="row1" value="row1">
-          <label class="form-check-label" for="row1" >1</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="rows" id="row2" value="row2" checked>
-          <label class="form-check-label" for="row2">2</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="rows" id="row3" value="row3" >
-          <label class="form-check-label" for="row3">3</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="rows" id="row4" value="row4" >
-          <label class="form-check-label" for="row4">4</label>
-        </div>
-      </div>
-
-      <!-- columns group -->
-      <label for="exampleInputEmail1">Number of Columns: 
-          <span id="columnsValue" class="text-primary">3</span>
+      <label class="btn btn-light btn-sm">
+        <input type="radio" name="ampToggle" id="ampToggle" value="AMP" autocomplete="off">
+        AMP Email
       </label>
-      <div class="form-group">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="columns" id="column1" value="column1">
-          <label class="form-check-label" for="column1">1</label>
-        </div>
-        <div class="form-check form-check-inline" >
-          <input class="form-check-input" type="radio" name="columns" id="column2" value="column2">
-          <label class="form-check-label" for="column2">2</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="columns" id="column3" value="column3" checked>
-          <label class="form-check-label" for="column3">3</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="columns" id="column4" value="column4">
-          <label class="form-check-label" for="column4">4</label>
-        </div>
+    </div><br>
+
+    <!-- rows group -->
+    <label for="exampleInputEmail1">Number of Rows:
+      <span id="rowsValue" class="text-primary">2</span>
+    </label>
+    <div class="form-group">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="rows" id="row1" value="row1">
+        <label class="form-check-label" for="row1">1</label>
       </div>
-
-      <!-- slider value -->  
-      <label for="exampleInputEmail1">Media Spacing: 
-          <span id="spacingValue" class="text-primary">3px</span>
-      </label>
-
-      <!-- slider -->
-      <div class="form-group">
-          <input type="range" class="custom-range" min="0" max="5" id="customRange2" />
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="rows" id="row2" value="row2" checked>
+        <label class="form-check-label" for="row2">2</label>
       </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="rows" id="row3" value="row3">
+        <label class="form-check-label" for="row3">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="rows" id="row4" value="row4">
+        <label class="form-check-label" for="row4">4</label>
+      </div>
+    </div>
 
-      <!-- generate button -->
-      <button type="submit" class="btn btn-primary" id="generateTemplate">Generate Template</button>
-      
-      <hr>
+    <!-- columns group -->
+    <label for="exampleInputEmail1">Number of Columns:
+      <span id="columnsValue" class="text-primary">3</span>
+    </label>
+    <div class="form-group">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="columns" id="column1" value="column1">
+        <label class="form-check-label" for="column1">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="columns" id="column2" value="column2">
+        <label class="form-check-label" for="column2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="columns" id="column3" value="column3" checked>
+        <label class="form-check-label" for="column3">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="columns" id="column4" value="column4">
+        <label class="form-check-label" for="column4">4</label>
+      </div>
+    </div>
 
-      <!-- code for table -->
-      <div class="form-group mt-3" id="codePreview">
-        <label for="exampleFormControlTextarea1">Table Code:</label>
-        <textarea class="form-control" id="formControlTextarea" rows="5" readonly>
+    <!-- slider value -->
+    <label for="exampleInputEmail1">Media Spacing:
+      <span id="spacingValue" class="text-primary">3px</span>
+    </label>
+
+    <!-- slider -->
+    <div class="form-group">
+      <input type="range" class="custom-range" min="0" max="5" id="customRange2" />
+    </div>
+
+    <!-- generate button -->
+    <button type="submit" class="btn btn-primary" id="generateTemplate">Generate Template</button>
+
+    <hr>
+
+    <!-- code for table -->
+    <div class="form-group mt-3" id="codePreview">
+      <label for="exampleFormControlTextarea1">Table Code:</label>
+      <textarea class="form-control" id="formControlTextarea" rows="5" readonly>
         </textarea>
-      </div>
+    </div>
 
-    </form>
+  </form>
 
-    <!-- table preview -->
-    <div class="container" id="table-preview"></div>
-    
+  <!-- table preview -->
+  <div class="container" id="table-preview"></div>
 
+  <!-- imports-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-  </body>
 </html>
